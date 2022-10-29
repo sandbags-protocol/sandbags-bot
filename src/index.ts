@@ -1,5 +1,2 @@
-console.log(1)
-
-export interface SandbagsBot {
-  test: number
-}
+export * from './trigger'
+export * from './judger'
