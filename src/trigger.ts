@@ -5,18 +5,18 @@ export enum SandbagsBotTriggerType {
 export enum SandbagsBotTriggerNetwork {
   ethereumMainnet = 'ethereumMainnet',
   ethereumGoerli = 'ethereumGoerli',
+  ethereumSepolia = 'ethereumSepolia',
   aptosMainnet = 'aptosMainnet',
 }
 
 export interface SandbagsBotBaseTrigger {
   type: SandbagsBotTriggerType
   network: SandbagsBotTriggerNetwork
-  code: string
 }
 
 export interface SandbagsBotEvmBaseTrigger extends SandbagsBotBaseTrigger {
   // eslint-disable-next-line prettier/prettier
-  network: SandbagsBotTriggerNetwork.ethereumGoerli | SandbagsBotTriggerNetwork.ethereumMainnet
+  network: SandbagsBotTriggerNetwork.ethereumGoerli | SandbagsBotTriggerNetwork.ethereumMainnet | SandbagsBotTriggerNetwork.ethereumSepolia
 }
 
 export interface SandbagsBotEvmEventTrigger extends SandbagsBotEvmBaseTrigger {

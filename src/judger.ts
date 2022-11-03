@@ -4,5 +4,8 @@ export enum SandbagsBotJudgerResult {
 }
 
 export interface SandbagsBotBaseJudger {
-  review: (...args: any[]) => Promise<SandbagsBotJudgerResult>
+  process: (
+    sandbags: any,
+    done: (result: SandbagsBotJudgerResult) => void
+  ) => void
 }
