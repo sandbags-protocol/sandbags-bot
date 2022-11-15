@@ -12,5 +12,5 @@ export interface SandbagsBot<Trigger extends SandbagsBotBaseTrigger> {
   code: JudgerCode
 }
 
-export type SandbagsBaseEvmBaseBot = SandbagsBot<SandbagsBotEvmBaseTrigger>
-export type SandbagsBaseEvmEventBot = SandbagsBot<SandbagsBotEvmEventTrigger>
+export type SandbagsEvmBaseBot = SandbagsBot<SandbagsBotEvmBaseTrigger>
+export type SandbagsEvmEventBot = SandbagsBot<SandbagsBotEvmEventTrigger>
