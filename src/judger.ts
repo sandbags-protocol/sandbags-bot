@@ -4,8 +4,5 @@ export enum SandbagsBotJudgerResult {
 }
 
 export interface SandbagsBotBaseJudger {
-  process: (
-    sandbags: any,
-    done: (result: SandbagsBotJudgerResult) => void
-  ) => void
+  process: (sandbags: any) => SandbagsBotJudgerResult
 }
