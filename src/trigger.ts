@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/indent */
+import { JsonFragment } from '@ethersproject/abi'
+
 export enum SandbagsBotTriggerType {
   event = 'event',
   function = 'function',
@@ -24,6 +26,7 @@ export interface SandbagsBotEvmBaseTrigger extends SandbagsBotBaseTrigger {
     | SandbagsBotTriggerNetwork.ethereumSepolia
     | SandbagsBotTriggerNetwork.bscMainnet
     | SandbagsBotTriggerNetwork.bscTestnet
+  abi?: Array<JsonFragment | string>
 }
 
 export interface SandbagsBotEvmEventTrigger extends SandbagsBotEvmBaseTrigger {
