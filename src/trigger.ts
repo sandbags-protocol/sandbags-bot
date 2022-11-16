@@ -32,5 +32,5 @@ export interface SandbagsBotEvmBaseTrigger extends SandbagsBotBaseTrigger {
 export interface SandbagsBotEvmEventTrigger extends SandbagsBotEvmBaseTrigger {
   type: SandbagsBotTriggerType.event
   contractAddress: string
-  topics?: string[]
+  topics?: Array<string | null>
 }
